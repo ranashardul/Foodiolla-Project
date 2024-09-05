@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% block body %}
+
+{% if todos %}
+
+<style>
+        body {
+          background-image: url('https://res.cloudinary.com/the-infatuation/image/upload/v1657763083/cms/guides/dark-chicago-restaurant-power-rankings/Izakaya_sandynoto.jpg');
+            background-size: cover;
+            background-color: rgba(0, 0, 0, 0.7)
+        }
+</style>
+
+<body>
+<br>
+<br>
+<div class="input-group col-md-4 mx-auto">
+  <form  action="/food" method="POST">
+    <select name="search">
+      <option value = "Paradise">Paradise</option>
+      <option value = "Aaha Andhra">Aaha Andhra</option>
+      <option value = "Donne Biryani Mane">Donne Biryani Mane</option>
+      <option value = "Nagarjuna">Nagarjuna</option>
+      <option value = "Donne Biryani">Donne Biryani</option>
+      <option value = "Behrouz Biryani">Behrouz Biryani</option>
+      <option value = "BOX8- Desi Meals">BOX8-Desi Meals</option>
+      <option value = "Ambur Biryani">Ambur Biryani</option>
+      <option value = "Meghana Foods">Meghana Foods</option>
+      <option value = "Nandhan Palace">Nandhan Palace</option>
+      <option value = "Dindigul Thalappakatti">Dindigul Thalappakatti</option>
+      <option value = "Tandoori Taal">Tandoori Taal</option>
+      <option value = "Biryani Trip">Biryani Trip</option>
+      <option value = "Anjappar">Anjappar</option>
+      <option value = "Tunday Kababi">Tundav Kababi</option>
+    </select>
+    <button type="submit" class="btn btn-primary btn-sm">Search restaurant</button>
+</form>
+</div>
+<br>
+<br>
+<div class="container">
+  <div class="card-deck mb-3 text-cente">
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">ZOMATO</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">
+          {% if todos is not none %}
+            {{ todos[0][0][0] }}
+          {% endif %}
+          <small class="text-muted"></small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          {% if todos is not none %}
+            <h3>{{ todos[0][0][1] }}</h3>
+          {% endif %}
+        </ul>
+        <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">SWIGGY</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">
+          {% if todos is not none %}
+            {{ todos[1][0][0] }}
+          {% endif %}
+          <small class="text-muted"></small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          {% if todos is not none %}
+            <h3>{{ todos[1][0][1] }}</h3>
+          {% endif %}
+        </ul>
+        <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Uber Eats</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">
+          {% if todos is not none %}
+            {{ todos[2][0][0] }}
+          {% endif %}
+           <small class="text-muted"></small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          {% if todos is not none %}
+            <h3>{{ todos[2][0][1] }}</h3>
+          {% endif %}
+        </ul>
+        <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
+      </div>
+    </div>
+  </div>
+
+  
+  <footer>
+		<nav>
+			<p>
+<p style="color: aliceblue;">Website Under Development </p>
+<p></p>
+<p style="color: aliceblue;">Made With 🤍</p>
+			</p>
+		</nav>
+		<p style="color: aliceblue;">Copyright &copy; 2023 Foodiolla</p>
+	</footer>
+
+
+{% endif %}
+{% endblock body %}
