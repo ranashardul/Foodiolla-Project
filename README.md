@@ -1,0 +1,2 @@
+# Foodiolla-Project
+ Foodiolla is a web-based platform that allows users to explore and compare the menus of various restaurants across popular food delivery platforms like Zomato, Uber Eats, and Swiggy. By aggregating restaurant menu data and displaying price comparisons, Foodiolla helps users make informed decisions when ordering food online, ensuring they get the best deal for their favorite meals.
